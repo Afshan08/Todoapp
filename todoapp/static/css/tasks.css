@@ -1,0 +1,22 @@
+.description-div{
+    padding: 8px 0;
+    border: 1px solid #bbbbbb;
+    border-radius: 8px;
+    padding-left: 10px;
+}
+
+.ParentdescriptionDiv{
+    width: 100%;
+    font-size: 1.0rem;
+    color: #333;
+    text-align: left !important;
+    display: none;
+    font-weight: 700;
+}
+
+#add-task{
+    background-color: #01690d;
+    color: #fff;
+}
+
+

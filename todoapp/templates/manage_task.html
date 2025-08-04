@@ -1,0 +1,36 @@
+{% extends "layout.html"%}
+{% load static %}
+{% block title %}Manage Tasks{% endblock %}
+{% block stylesheet %}
+    <link href={% static "css/tasks.css" %} rel="stylesheet">
+{% endblock %} 
+
+{% block content %}
+<div class="container mt-5">
+    <button id='add-task' class='btn btn-sm btn-secondary'>Add Tasks </button>
+    <div class="adding">
+
+        <div class='Task-editor card p-4 shadow-sm' id='cancel-box' style="display: none;">
+            <textarea class='form-control mb-3' id='title' name='task' rows="1" placeholder="What are you working on?"></textarea>
+            <textarea class='form-control  mb-3' id='description' name='description' rows="3" placeholder="Description?"></textarea>
+
+
+
+            <div class='placeholder' id='notes-div' style="display:none; max-width: 100%; height: 300px; overflow-y: auto;"></div>
+
+            <div id='call-to-action' class="d-flex justify-content-end gap-3 mt-3">
+                <button class='btn btn-outline-secondary cancel-button' id='task-cancel-button'>Cancel</button>
+                <button class='btn btn-primary save-button' id='task-submit-button' type='submit'>Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Your Tasks</h2>
+    <div id="task-list" class="list-group"></div>
+</div>
+
+<!-- Link to external JS -->
+<script src="{% static 'js/manage_tasks.js' %}"></script>
+{% endblock %}
